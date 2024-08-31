@@ -1,0 +1,384 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Body and Container Styles */
+body {
+  background: #121212;
+  color: #E0E0E0;
+  line-height: 1.6;
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #1E1E1E;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Menu Page */
+.menu {
+  text-align: center;
+}
+
+.menu h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #F0F0F0;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  background: linear-gradient(135deg, #FF6B6B, #FFD93D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s infinite alternate;
+}
+
+.menu button {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 107, 107, 0.5);
+}
+
+.menu button:active {
+  transform: translateY(2px);
+}
+
+/* Animations */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.5), 0 0 20px rgba(255, 217, 61, 0.5);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 107, 107, 1), 0 0 40px rgba(255, 217, 61, 1);
+  }
+}
+
+/* Volume Calculator */
+.calculator {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.calculator h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.calculator input,
+.calculator select {
+  display: block;
+  margin: 1rem auto;
+  padding: 15px 20px; /* Increased padding */
+  width: 100%; /* Full width */
+  max-width: 500px; /* Adjust max-width for wider input boxes */
+  border: 2px solid #fff; /* Improved border style */
+  border-radius: 10px; /* Enhanced border radius */
+  font-size: 1.2rem; /* Larger font size */
+  color: #333;
+  background: #fff;
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.calculator input:focus,
+.calculator select:focus {
+  border-color: #6a3093; /* Focus border color */
+  box-shadow: 0 0 5px rgba(106, 48, 147, 0.5); /* Focus shadow */
+}
+
+.calculator button {
+  background: #6a3093;
+  background: linear-gradient(to right, #a044ff, #6a3093);
+  padding: 12px 25px; /* Increased padding */
+  border-radius: 50px;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.calculator button:hover {
+  background: #FF6B6B;
+  transform: scale(1.05);
+}
+
+.calculator button:active {
+  transform: scale(0.95);
+}
+
+.calculator .result {
+  margin-top: 2rem;
+  background: #333;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: left;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Secondary Domain Generator */
+.domain-generator {
+  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.domain-generator h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.domain-generator input {
+  display: block;
+  margin: 1rem auto;
+  padding: 15px 20px; /* Increased padding */
+  width: 100%; /* Full width */
+  max-width: 500px; /* Adjust max-width for wider input boxes */
+  border: 2px solid #fff; /* Improved border style */
+  border-radius: 10px; /* Enhanced border radius */
+  font-size: 1.2rem; /* Larger font size */
+  color: #333;
+  background: #fff;
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.domain-generator input:focus {
+  border-color: #12c2e9; /* Focus border color */
+  box-shadow: 0 0 5px rgba(18, 194, 233, 0.5); /* Focus shadow */
+}
+
+.domain-generator button {
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  padding: 12px 25px; /* Increased padding */
+  border-radius: 50px;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.domain-generator button:hover {
+  background: #FF6B6B;
+  transform: scale(1.05);
+}
+
+.domain-generator button:active {
+  transform: scale(0.95);
+}
+
+.domain-generator ul {
+  margin-top: 2rem;
+  list-style: none;
+  text-align: left;
+  padding-left: 0;
+  color: #fff;
+}
+
+.domain-generator ul li {
+  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+/* Email Header Analyzer */
+.header-analyzer {
+  background: linear-gradient(135deg, #ff4b1f, #1fddff);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.header-analyzer h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.header-analyzer textarea {
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 15px 20px; /* Increased padding */
+  border: 2px solid #fff; /* Improved border style */
+  border-radius: 10px; /* Enhanced border radius */
+  font-size: 1.2rem; /* Larger font size */
+  color: #333;
+  background: #fff;
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.header-analyzer textarea:focus {
+  border-color: #FF416C; /* Focus border color */
+  box-shadow: 0 0 5px rgba(255, 65, 108, 0.5); /* Focus shadow */
+}
+
+.header-analyzer button {
+  background: linear-gradient(135deg, #FF416C, #FF4B2B);
+  padding: 12px 25px; /* Increased padding */
+  border-radius: 50px;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.header-analyzer button:hover {
+  background: #FF6B6B;
+  transform: scale(1.05);
+}
+
+.header-analyzer button:active {
+  transform: scale(0.95);
+}
+
+/* Email Verifier */
+.email-verifier {
+  background: linear-gradient(135deg, #c2e9fb, #64b3f4);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.email-verifier h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.email-verifier input {
+  display: block;
+  margin: 1rem auto;
+  padding: 15px 20px; /* Increased padding */
+  width: 100%; /* Full width */
+  max-width: 500px; /* Adjust max-width for wider input boxes */
+  border: 2px solid #fff; /* Improved border style */
+  border-radius: 10px; /* Enhanced border radius */
+  font-size: 1.2rem; /* Larger font size */
+  color: #333;
+  background: #fff;
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.email-verifier input:focus {
+  border-color: #FF6B6B; /* Focus border color */
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.5); /* Focus shadow */
+}
+
+.email-verifier button {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  padding: 12px 25px; /* Increased padding */
+  border-radius: 50px;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.email-verifier button:hover {
+  background: #FF6B6B;
+  transform: scale(1.05);
+}
+
+.email-verifier button:active {
+  transform: scale(0.95);
+}
+
+.email-verifier .result {
+  margin-top: 2rem;
+  background: #333;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: left;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Validation Messages */
+.validation-messages {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #FF6B6B;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1E1E1E;
+  color: #E0E0E0;
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu h1 {
+    font-size: 2.5rem;
+  }
+
+  .calculator h2,
+  .domain-generator h2,
+  .header-analyzer h2,
+  .email-verifier h2 {
+    font-size: 2rem;
+  }
+
+  .menu button,
+  .calculator button,
+  .domain-generator button,
+  .header-analyzer button,
+  .email-verifier button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .calculator input,
+  .domain-generator input,
+  .header-analyzer textarea,
+  .email-verifier input {
+    font-size: 1rem;
+    max-width: 100%; /* Ensure full width on small screens */
+  }
+}
